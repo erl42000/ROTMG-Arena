@@ -28,11 +28,11 @@ blackTile     = pygame.image.load("BlackTile.png").convert_alpha()
 
 tileList      = [blackTile, celestialTile]
 
-enemyHealth   = 12000
 playerHealth  = 600
+enemyHealth   = 12000
 
 sidebar       = [600, 0, 200, 800]
-character     = Character()
+character     = Character(600, 0, 0, 0, 0, 0, 0, 0)
 characterXY   = [275, 275]
 characterXYHitbox  = [275, 275, 50, 50]
 enemyXY = [250, 50]
@@ -127,12 +127,14 @@ while not ended:
             else:
 
                 for i in playerProjectileList:
+                    
                     i.yOffset = i.yOffset - 5
+                    
                 enemyYOffset -= 5
 
                 for i in enemyProjectileList:
+                    
                     i.yOffset = i.yOffset - 5
-
 
         if keyDown[pygame.K_s]:
 
@@ -145,12 +147,14 @@ while not ended:
             else:
 
                 for i in playerProjectileList:
+                    
                     i.yOffset = i.yOffset + 5
+                    
                 enemyYOffset += 5
 
                 for i in enemyProjectileList:
+                    
                     i.yOffset = i.yOffset + 5
-
 
         if keyDown[pygame.K_a]:
 
@@ -163,12 +167,14 @@ while not ended:
             else:
 
                 for i in playerProjectileList:
+                    
                     i.xOffset = i.xOffset - 5
+                    
                 enemyXOffset -= 5
 
                 for i in enemyProjectileList:
+                    
                     i.xOffset = i.xOffset - 5
-
 
         if keyDown[pygame.K_d]:
 
