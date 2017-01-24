@@ -5,12 +5,20 @@ enemyProjectileList = []
 
 class Character:
 
-    def __init__(self):
+    def __init__(self, hp, mp, attack, defense, dexterity, speed, vitality, wisdom):
 
         self.leftCounter = 0
         self.rightCounter = 0
         self.upCounter = 0
         self.downCounter = 0
+        self.hp = hp
+        self.mp = mp
+        self.attack = attack
+        self.defense = defense
+        self.dexterity = dexterity
+        self.speed = speed
+        self.vitality = vitality
+        self.wisdom = wisdom
         self.lastDirection = "down"
         self.characterSprite = pygame.image.load("ArcherNeutralDown.png").convert_alpha()
 
